@@ -3,6 +3,7 @@
 let greeting = 'Hey';
 //let variables cannot be re-declared, only can be updated
 greeting = 'Ho Ho';
+
 function greeter() {
   //msg is function scoped, we cannot access the variable msg outside of a function
   let msg = 'hello';
