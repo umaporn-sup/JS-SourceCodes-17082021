@@ -8,6 +8,7 @@ console.log(employee);
 let book = {
   isbn: 123456789,
   title: 'JavaScript',
+
   author: {
     firstname: 'Umaporn',
     lastname: 'Sup'
@@ -70,7 +71,7 @@ class Rectangle {
     // Everything added to 'this' will exist on each individual instance
     this._width = width;
     this._height = height;
-    alert('Rectangle constructor working');
+    // alert('Rectangle constructor working');
   }
   // Everything defined in the class body is defined on the class prototype object and sharing between instances.
   area() {
