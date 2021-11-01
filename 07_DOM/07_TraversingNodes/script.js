@@ -4,7 +4,7 @@ console.log(soupMenu.parentElement); //<div class="menu">
 let currentChildNode = soupMenu.firstElementChild; // <li class="meat">Spicy Bacon-Corn Soup</li>
 
 while (currentChildNode !== soupMenu.lastChild) {
-  if (currentChildNode.nodeType === 1) {
+  if (currentChildNode.nodeType === Node.ELEMENT_NODE) {
     console.log(currentChildNode);
   }
 

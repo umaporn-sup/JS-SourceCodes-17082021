@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Sign Up Form</title>
+    <style>
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      label span {
+        color: red;
+      }
+      input {
+        padding: 10px;
+        width: 200px;
+      }
+      input:valid {
+        border: 2px solid green;
+      }
+      input:invalid {
+        border: 2px solid red;
+      }
+
+      button {
+        margin: 10px;
+        color: white;
+        border: 0;
+        width: 200px;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+      #submit {
+        background-color: green;
+      }
+      #cancel {
+        background-color: red;
+      }
+      #reset {
+        background-color: tan;
+      }
+      #signin {
+        background-color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Create new account</h1>
+    <form action="#" method="post">
+      <div>
+        <label for="first_name">First name: <span>*</span></label>
+        <input id="first_name" type="text" name="firstname" required />
+
+        <label for="last_name">Last name: <span>*</span></label>
+        <input id="last_name" type="text" name="lastname" />
+
+        <label for="email">Email: <span>*</span></label>
+        <input id="email" type="email" name="email" required />
+
+        <label for="password">Password: <span>*</span></label>
+        <input id="password" type="password" name="password" required />
+      </div>
+      <div>
+        <button id="submit" type="submit" value="Submit New Account">
+          Create new account
+        </button>
+      </div>
+      <div>
+        <button id="reset" type="button" value="Reset All Values">Reset</button>
+      </div>
+
+      <div>
+        <button
+          id="signin"
+          type="button"
+          value="Have my own account, need Sign In"
+        >
+          Sign in
+        </button>
+      </div>
+    </form>
+    <a id="sitlink" href="https://www.sit.kmutt.ac.th/">SIT, KMUTT</a>
+    <script src="script.js"></script>
+  </body>
+</html>
