@@ -49,14 +49,14 @@ p.addEventListener(
   },
   true
 );
-const d = document.getElementById('d1');
-d.addEventListener('click', (event) => {
-  alert(event.currentTarget), alert(event.eventPhase);
-});
-d.addEventListener(
-  'click',
-  (event) => {
-    alert(event.currentTarget), alert(event.eventPhase);
-  },
-  true
-);
+// const d = document.getElementById('d1');
+// d.addEventListener('click', (event) => {
+//   alert(event.currentTarget), alert(event.eventPhase);
+// });
+// d.addEventListener(
+//   'click',
+//   (event) => {
+//     alert(event.currentTarget), alert(event.eventPhase);
+//   },
+//   true
+// );

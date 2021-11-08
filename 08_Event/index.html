@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<style>
+  #topic {
+    color: blueviolet;
+  }
+</style>
+<html lang="en">
+  <head>
+    <title>Event Types</title>
+  </head>
+
+  <body>
+    <h3 id="topic">Event Types</h3>
+    <form
+      action="#"
+      method="post"
+      id="userForm"
+      style="border: 1px solid red; padding: 10px; margin: 10px"
+    >
+      <div
+        id="userDivForm"
+        style="border: 1px solid black; padding: 10px; margin: 10px"
+      >
+        <label for="first_name">First name: <span>*</span></label>
+        <input id="first_name" type="text" required />
+        <label for="last_name">Last name: <span>*</span></label>
+        <input id="last_name" type="text" required />
+        <label for="display_name">Display name: <span>*</span></label>
+        <input id="display_name" type="text" required />
+        <p id="pdisplay"></p>
+      </div>
+      <div id="coord"></div>
+      <div id="divButtonPanel" style="border: 1px solid purple; padding: 10px">
+        <button id="submitOK" type="submit" value="Submit Account">OK</button>
+        <button id="C001" type="button" value="Not Create Account">
+          Cancel
+        </button>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

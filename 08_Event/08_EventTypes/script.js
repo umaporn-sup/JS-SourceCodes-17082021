@@ -23,7 +23,7 @@ window.addEventListener('resize', (event) => {
 document.addEventListener('DOMContentLoaded', () => alert('Dom ready!'));
 
 firstName.onblur = function (event) {
-  console.log(`${firstName.id}: ${event.target}: on blur!`);
+  console.log(`${event.target}: ${event.target.id}: on blur!`);
 };
 
 lastName.onfocus = function (event) {
@@ -34,4 +34,11 @@ lastName.onfocus = function (event) {
 firstName.addEventListener('input', function () {
   display.value = firstName.value;
   // pdisplay.textContent = firstName.value;
+});
+
+const divFormEle = document.querySelector('#form');
+const divCoordEle = document.querySelector('#coord');
+divFormEle.addEventListener('click', (event) => {
+  divCoordEle.innerHTML =
+    'scree x:' + event.screenX + '<br>' + 'screen y: ' + event.screenY;
 });
