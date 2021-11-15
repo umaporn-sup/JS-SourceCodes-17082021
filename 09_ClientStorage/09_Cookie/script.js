@@ -48,21 +48,32 @@ class CookieUtil {
   }
 }
 
+const encodeKey = encodeURIComponent('yourFont');
+const encodeValue = encodeURIComponent('12 pt');
+// let expireDate = new Date(Date.now() + 86400e3);
+let expireDate = new Date('2021-11-15');
+
+expireDate.toUTCString();
+// expireDate = new Date().toUTCString();
+// document.cookie = encodeKey + '=' + encodeValue + ';' + 'expires=' + expireDate;
+document.cookie = encodeKey + '=' + encodeValue + ';' + 'max-age=86400';
+// document.cookie = 'myBgColor=blue;path=/';
+
 //set cookies
-CookieUtil.set('name', 'Umaporn');
-CookieUtil.set('book', 'JavaScript Beginner');
-CookieUtil.set('hobby', 'reading', new Date('January 1, 2022'));
+// CookieUtil.set('name', 'Umaporn');
+// CookieUtil.set('book', 'JavaScript Beginner');
+// CookieUtil.set('hobby', 'reading', new Date('January 1, 2022'));
 
-alert(`CookieUtil.get("name")#1: ${CookieUtil.get('name')}`); // "Umaporn"
-alert(`CookieUtil.get("book")#1: ${CookieUtil.get('book')}`); // "JavaScript Beginner"
-alert(`CookieUtil.get("hobby")#1: ${CookieUtil.get('hobby')}`);
+// alert(`CookieUtil.get("name")#1: ${CookieUtil.get('name')}`); // "Umaporn"
+// alert(`CookieUtil.get("book")#1: ${CookieUtil.get('book')}`); // "JavaScript Beginner"
+// alert(`CookieUtil.get("hobby")#1: ${CookieUtil.get('hobby')}`);
 
-//overwrite cookies
-CookieUtil.set('book', 'JavaScript Tutorial'); //overwrite because same path and name
-alert(`CookieUtil.get("book")#2: ${CookieUtil.get('book')}`); // "JavaScript Beginner"
+// //overwrite cookies
+// CookieUtil.set('book', 'JavaScript Tutorial'); //overwrite because same path and name
+// alert(`CookieUtil.get("book")#2: ${CookieUtil.get('book')}`); // "JavaScript Beginner"
 
-CookieUtil.set('hobby2', 'shopping', new Date('December 10, 2021')); //overwrite and change an expiration date
-alert(`CookieUtil.get("hobby")#2: ${CookieUtil.get('hobby2')}`); //shopping
+// CookieUtil.set('hobby2', 'shopping', new Date('December 10, 2021')); //overwrite and change an expiration date
+// alert(`CookieUtil.get("hobby")#2: ${CookieUtil.get('hobby2')}`); //shopping
 
 // remove the cookies
 // CookieUtil.unset("name");
